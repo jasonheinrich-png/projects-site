@@ -24,11 +24,12 @@ follow these rules. When in doubt, leave it out.
 ## Each project entry contains only
 
 - A one-line tagline.
+- A one-sentence final goal (the outcome the project is working toward).
 - A 2 to 4 sentence overview: what it does and why it exists.
 - 3 to 6 feature bullets.
 - Tech tags in general terms (languages, frameworks, platforms, hardware categories
   such as "a quadruped robot" or "Android TV").
-- Status: `Active`, `Maintained` or `Early`.
+- Status: `Active`, `Maintained` or `Early`, plus one or two sentences on where it stands now.
 - Last updated month (`YYYY-MM`, from `git log -1 --format=%cs`).
 
 ## Before committing

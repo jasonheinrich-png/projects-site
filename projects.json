@@ -4,6 +4,7 @@
     "name": "Local AI and Mission Control",
     "repo": "local-qwen-agent",
     "tagline": "A private, local-first AI assistant with a model router, a web control panel and voice.",
+    "goal": "A private assistant that handles everyday questions, projects and home-lab tasks on local models, using the cloud only when allowed.",
     "overview": "A self-hosted AI assistant that runs open-weight language models on a home GPU and only reaches out to cloud models when a request is eligible and the owner allows it. An agent layer keeps projects, chats and tasks organized, and a router decides which model may handle each request. Mission Control is the everyday web interface, designed to feel as simple as a mainstream chat app while keeping operator tools on a separate admin page.",
     "features": [
       "Local-first routing: ordinary questions stay on a local model; cloud use needs explicit approval, spending caps and sensitivity checks",
@@ -26,6 +27,7 @@
       "Windows"
     ],
     "status": "Active",
+    "current": "Mission Control, local routing and voice are in daily use. The services are being moved off the main desktop onto dedicated home-lab machines.",
     "updated": "2026-11"
   },
   {
@@ -33,6 +35,7 @@
     "name": "AI Phone Control",
     "repo": "phone-control",
     "tagline": "Voice-triggered Android automations with a monitor that checks whether they actually worked.",
+    "goal": "Reliable voice-controlled phone automations that confirm every action actually happened.",
     "overview": "A dedicated Android phone runs automation workflows that operate other apps on request, triggered by smart-speaker voice commands through a home automation hub. Because tapping through another app's UI can fail silently, a companion monitor watches each run, captures the screen state and classifies the outcome instead of trusting a simple success code. The project repaired and hardened an earlier set of workflows and added health checks so problems are noticed quickly.",
     "features": [
       "Phone workflows wake the screen, read the target app's UI and act only when the expected state is present",
@@ -53,6 +56,7 @@
       "ADB"
     ],
     "status": "Active",
+    "current": "Workflows repaired and hardened; the outcome monitor, heartbeat and watchdog alerts are running.",
     "updated": "2026-11"
   },
   {
@@ -60,6 +64,7 @@
     "name": "ChampLeague",
     "repo": "champleague",
     "tagline": "A fast 3v3 arcade football (soccer) game prototype built in Roblox Studio.",
+    "goal": "A small, playable first public release of a family-made 3v3 arcade football game on Roblox.",
     "overview": "An original arcade football game where each human player controls a single footballer in quick three-a-side matches, with automated goalkeepers and a server-authoritative ball. It is a family-friendly hobby project: contributors suggest ideas in plain language through a GitHub issue form, and changes are reviewed and playtested in Roblox Studio before they are merged. The current build is a Studio-only prototype on the way to a small first release.",
     "features": [
       "3v3 matches with up to six human players, spectating and AI goalkeepers",
@@ -75,6 +80,7 @@
       "GitHub Actions"
     ],
     "status": "Early",
+    "current": "Studio-only prototype with matches, controls and kits working; playtesting toward a first release.",
     "updated": "2026-10"
   },
   {
@@ -82,6 +88,7 @@
     "name": "Family Hub",
     "repo": "family-hub",
     "tagline": "Turns emailed invitations into reviewable calendar proposals for a shared family calendar.",
+    "goal": "A shared family calendar that fills itself from emailed invitations, with a person approving every addition.",
     "overview": "A small desktop helper connected to a dedicated email account and a shared calendar. It scans recent mail for calendar attachments and invitation-like messages, compares them with what is already on the calendar, and produces a local review page of proposed additions, duplicates and items that need a human decision. Nothing is added automatically; the current version only reads mail and calendar data.",
     "features": [
       "Detects calendar attachments, invitation wording and dated activity emails",
@@ -101,6 +108,7 @@
       "Firebase Hosting"
     ],
     "status": "Active",
+    "current": "The read-only scanner and offline review page work. Approval-based adding from email and voice is planned.",
     "updated": "2026-11"
   },
   {
@@ -108,6 +116,7 @@
     "name": "Camera Scan Station",
     "repo": "camera-scan-station",
     "tagline": "Turning ordinary photos into 3D-printable STL models, no laser scanner needed.",
+    "goal": "Go from a physical object to a printable STL using only a compact camera, a turntable and lights.",
     "overview": "The goal is to go from a physical object to a printable STL file using only an off-the-shelf compact camera instead of an expensive laser scanner. Capture tools coordinate the camera (running custom firmware), a motorized turntable and two LED light bars to photograph the object from evenly spaced angles; photogrammetry then rebuilds those photos into a 3D mesh. Each session records its settings, and finished scans are audited and packaged with checksums for transfer to the reconstruction machine. A 12-view lighting and rotation test has succeeded; reconstruction quality is the next thing to validate.",
     "features": [
       "Photo-to-STL pipeline: photograph an object, reconstruct a mesh with photogrammetry, export an STL",
@@ -127,6 +136,7 @@
       "3D printing"
     ],
     "status": "Active",
+    "current": "A 12-view lighting and rotation capture test succeeded; checking photogrammetry reconstruction quality is next.",
     "updated": "2026-11"
   },
   {
@@ -134,6 +144,7 @@
     "name": "Go2 Home Console",
     "repo": "go2-home-console",
     "tagline": "A local dashboard, voice companion and onboard-compute plan for a quadruped robot.",
+    "goal": "A quadruped robot that runs entirely on its own from a battery-powered backpack computer, with local vision and voice.",
     "overview": "A home console for a consumer quadruped robot that adds local camera questions, offline speech recognition, a spoken robot voice and supervised controls. The long-term goal is fully self-contained operation from a battery-powered backpack computer on the robot, so a native install on a small NVIDIA Jetson board is being built and measured alongside the desktop version. The project keeps a detailed decision history and a separate current-best-practice guide so every claim is backed by recorded evidence.",
     "features": [
       "Browser dashboard for camera answers, speech, light commands and supervised shutdown preparation",
@@ -154,6 +165,7 @@
       "3D printing"
     ],
     "status": "Active",
+    "current": "The desktop console works with camera questions, offline speech and supervised controls. A native Jetson install is being built and measured, and follow-me is in simulation.",
     "updated": "2026-11"
   },
   {
@@ -161,6 +173,7 @@
     "name": "Office TV Cleanup and Launcher",
     "repo": "office-tv",
     "tagline": "Stripping the ads and tracking out of a Google TV, reversibly, plus a clean custom home screen.",
+    "goal": "An ad-free, tracking-free Google TV with a clean home screen, where every change can be undone.",
     "overview": "Smart TVs ship with home screens full of ads, sponsored rows and background tracking. This project removes them: scripts turn off the preinstalled ad, promotion and telemetry packages on an Android-based Google TV without uninstalling anything, so every change can be undone. It also replaces the ad-filled home screen with a lightweight custom launcher showing a clock, weather and an editable app grid, plus a screensaver of openly licensed photos with credits.",
     "features": [
       "Removes home-screen ads, sponsored content and usage tracking by disabling those packages; nothing is uninstalled and everything is reversible",
@@ -179,6 +192,7 @@
       "Open-Meteo"
     ],
     "status": "Maintained",
+    "current": "Working and maintained: ad and telemetry packages are disabled reversibly, and the custom launcher and screensaver are in use.",
     "updated": "2026-11"
   },
   {
@@ -186,6 +200,7 @@
     "name": "Simple TV Launcher",
     "repo": "dads-tv-launcher",
     "tagline": "A big-button streaming launcher for Fire TV, designed for an older family member.",
+    "goal": "A five-button Fire TV launcher that lets an older relative reach their favorite streaming apps without help.",
     "overview": "A planned native app for a Fire TV streaming stick that shows exactly five large, high-contrast buttons for the streaming services a relative uses most, with live TV first and focused by default. The goal is to make getting back to familiar apps easy for someone who finds standard TV menus confusing. It works within the platform's rules: it is a normal app with no root access or launcher replacement. The requirements and design are written up; implementation is starting.",
     "features": [
       "Exactly five large, clearly labelled buttons with no scrolling, ads or extra menus",
@@ -202,6 +217,7 @@
       "Gradle"
     ],
     "status": "Early",
+    "current": "Requirements and design are written up; implementation is starting.",
     "updated": "2026-10"
   }
 ]

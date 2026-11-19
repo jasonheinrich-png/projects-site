@@ -7,7 +7,7 @@ It is published with GitHub Pages and contains only public-safe summaries.
 
 | File | Purpose |
 | --- | --- |
-| `projects.json` | The content: one entry per project (`slug`, `name`, `repo`, `tagline`, `overview`, `features[]`, `tech[]`, `status`, `updated`). |
+| `projects.json` | The content: one entry per project (`slug`, `name`, `repo`, `tagline`, `goal`, `overview`, `features[]`, `tech[]`, `status`, `current`, `updated`). |
 | `build.py` | Pre-renders `index.html` from `projects.json` (Python 3, standard library only). |
 | `index.html` | The generated page. Static HTML; works without JavaScript. Do not edit by hand. |
 | `style.css` | Styles. Light and dark themes follow the system setting. No external fonts, CDNs, analytics or trackers. |
@@ -23,7 +23,8 @@ python3 check_privacy.py   # must print "Privacy check passed"
 git commit -am "Update project descriptions"
 ```
 
-Field rules: `status` is `Active`, `Maintained` or `Early`; `updated` is `YYYY-MM`
+Field rules: `goal` is the final outcome in one sentence (at most 160 characters);
+`current` says where the project stands now (at most 240 characters); `status` is `Active`, `Maintained` or `Early`; `updated` is `YYYY-MM`
 (the month of the source repository's last commit); each project has 3 to 6 features.
 
 ## Content is curated for privacy
