@@ -40,21 +40,21 @@ header.site { padding-top: 3.5rem; padding-bottom: 2rem; }
 header.site h1 { margin: 0 0 .4rem; font-size: clamp(2rem, 5vw, 2.8rem); letter-spacing: -.02em; }
 header.site p { margin: 0; color: var(--muted); font-size: 1.1rem; }
 
-.grid {
-  list-style: none; margin: 0; padding: 0;
-  display: grid; gap: 1rem;
-  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
-}
-.card a {
-  display: flex; flex-direction: column; height: 100%;
-  padding: 1.15rem 1.2rem; text-decoration: none; color: inherit;
+.list { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: .75rem; }
+.row {
   background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius);
-  transition: border-color .15s, transform .15s;
+  padding: 1rem 1.2rem;
 }
-.card a:hover, .card a:focus-visible { border-color: var(--accent); transform: translateY(-2px); }
-.card h2 { font-size: 1.1rem; margin: .6rem 0 .35rem; }
-.card p { margin: 0 0 .9rem; color: var(--muted); font-size: .95rem; flex: 1; }
-.card .more { color: var(--accent); font-size: .9rem; font-weight: 600; }
+.row-head { display: flex; align-items: center; justify-content: space-between; gap: .75rem; margin-bottom: .5rem; }
+.row h2 { font-size: 1.1rem; margin: 0; }
+.row h2 a { color: inherit; text-decoration: none; }
+.row h2 a:hover, .row h2 a:focus-visible { color: var(--accent); text-decoration: underline; }
+.row-body, .goal-now { display: grid; grid-template-columns: 1fr 1fr; gap: .4rem 1.5rem; margin: 0; }
+.row-body dt, .goal-now dt {
+  color: var(--muted); font-size: .72rem; font-weight: 600; text-transform: uppercase; letter-spacing: .04em;
+}
+.row-body dd, .goal-now dd { margin: .1rem 0 0; font-size: .95rem; }
+.goal-now { margin-bottom: 1rem; padding: .85rem 1rem; background: var(--tag-bg); border-radius: 8px; }
 
 .status {
   display: inline-block; font-size: .75rem; font-weight: 600; letter-spacing: .03em;
@@ -84,7 +84,8 @@ code { font-family: ui-monospace, "SF Mono", Menlo, Consolas, monospace; font-si
 .top { margin: 1.2rem 0 0; font-size: .9rem; }
 
 footer.site { padding-top: 1rem; padding-bottom: 3rem; color: var(--muted); font-size: .9rem; }
-@media (max-width: 520px) {
+@media (max-width: 640px) {
+  .row-body, .goal-now { grid-template-columns: 1fr; }
   header.site { padding-top: 2.25rem; }
   .project { padding: 1.15rem 1.1rem .8rem; }
 }

@@ -9,7 +9,8 @@ from datetime import date
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent
-FIELDS = ("slug", "name", "repo", "tagline", "overview", "features", "tech", "status", "updated")
+FIELDS = ("slug", "name", "repo", "tagline", "goal", "overview", "features", "tech", "status", "current", "updated")
+LIMITS = {"goal": 160, "current": 240}
 STATUSES = {"Active", "Maintained", "Early"}
 
 TITLE = "Jason's projects"
@@ -36,6 +37,9 @@ def load():
             raise SystemExit(f"{p['slug']}: status must be one of {sorted(STATUSES)}")
         if not 3 <= len(p["features"]) <= 6:
             raise SystemExit(f"{p['slug']}: needs 3-6 features")
+        for field, cap in LIMITS.items():
+            if not 10 <= len(p[field].strip()) <= cap:
+                raise SystemExit(f"{p['slug']}: {field} must be 10-{cap} characters")
         month_label(p["updated"])
     return projects
 
@@ -44,16 +48,18 @@ def tags(items):
     return "".join(f'<li>{e(t)}</li>' for t in items)
 
 
-def card(p):
+def row(p):
     s = p["status"].lower()
     return f"""
-    <li class="card">
-      <a href="#{e(p['slug'])}">
+    <li class="row">
+      <div class="row-head">
+        <h2><a href="#{e(p['slug'])}">{e(p['name'])}</a></h2>
         <span class="status status-{s}">{e(p['status'])}</span>
-        <h2>{e(p['name'])}</h2>
-        <p>{e(p['tagline'])}</p>
-        <span class="more">Details</span>
-      </a>
+      </div>
+      <dl class="row-body">
+        <div><dt>Goal</dt><dd>{e(p['goal'])}</dd></div>
+        <div><dt>Where it stands</dt><dd>{e(p['current'])}</dd></div>
+      </dl>
     </li>"""
 
 
@@ -71,6 +77,10 @@ def detail(p):
         <div><dt>Repository</dt><dd><code>{e(p['repo'])}</code> (private)</dd></div>
       </dl>
     </header>
+    <dl class="goal-now">
+      <div><dt>Goal</dt><dd>{e(p['goal'])}</dd></div>
+      <div><dt>Where it stands</dt><dd>{e(p['current'])}</dd></div>
+    </dl>
     <p>{e(p['overview'])}</p>
     <h3>Key features</h3>
     <ul class="features">{feats}</ul>
@@ -81,7 +91,7 @@ def detail(p):
 
 
 def render(projects):
-    cards = "".join(card(p) for p in projects)
+    rows = "".join(row(p) for p in projects)
     details = "".join(detail(p) for p in projects)
     return f"""<!DOCTYPE html>
 <html lang="en">
@@ -102,8 +112,8 @@ def render(projects):
 </header>
 <main>
   <section aria-label="Project overview">
-    <ul class="grid" id="projects">{cards}
-    </ul>
+    <ol class="list" id="projects">{rows}
+    </ol>
   </section>
   <section aria-label="Project details" class="details">{details}
   </section>
