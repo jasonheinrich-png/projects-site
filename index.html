@@ -21,11 +21,11 @@
     <li class="row">
       <div class="row-head">
         <h2><a href="#local-ai">Local AI and Mission Control</a></h2>
-        <span class="status status-active">Active</span>
+        <span class="status status-maintained">Maintained</span>
       </div>
       <dl class="row-body">
         <div><dt>Goal</dt><dd>A private assistant for everyday questions, projects and home-lab tasks on local and cloud models, picked by request type, with cloud use only when allowed.</dd></div>
-        <div><dt>Where it stands</dt><dd>Mission Control, model routing and voice are in daily use. The services are being moved off the main desktop onto dedicated home-lab machines.</dd></div>
+        <div><dt>Where it stands</dt><dd>Services have moved from the main desktop to dedicated home-lab machines. The router now handles attachments, supports local-only private chats, and streams responses efficiently while maintaining privacy controls.</dd></div>
       </dl>
     </li>
     <li class="row">
@@ -104,22 +104,22 @@
   <article class="project" id="local-ai">
     <header>
       <h2>Local AI and Mission Control</h2>
-      <p class="tagline">A private, local-first AI assistant with a model router, a web control panel and voice.</p>
+      <p class="tagline">Private AI assistant with model router, web panel, voice, and approval-gated actions.</p>
       <dl class="meta">
-        <div><dt>Status</dt><dd><span class="status status-active">Active</span></dd></div>
+        <div><dt>Status</dt><dd><span class="status status-maintained">Maintained</span></dd></div>
         <div><dt>Updated</dt><dd>November 2026</dd></div>
         <div><dt>Repository</dt><dd><code>local-qwen-agent</code> (private)</dd></div>
       </dl>
     </header>
     <dl class="goal-now">
       <div><dt>Goal</dt><dd>A private assistant for everyday questions, projects and home-lab tasks on local and cloud models, picked by request type, with cloud use only when allowed.</dd></div>
-      <div><dt>Where it stands</dt><dd>Mission Control, model routing and voice are in daily use. The services are being moved off the main desktop onto dedicated home-lab machines.</dd></div>
+      <div><dt>Where it stands</dt><dd>Services have moved from the main desktop to dedicated home-lab machines. The router now handles attachments, supports local-only private chats, and streams responses efficiently while maintaining privacy controls.</dd></div>
     </dl>
-    <p>A self-hosted AI assistant that runs open-weight language models on a home GPU and only reaches out to cloud models when a request is eligible and the owner allows it. Because some models are better at certain tasks than others, a drag-and-drop screen assigns each kind of task to a chosen provider and model. An agent layer keeps projects, chats and tasks organized, and a router decides which model may handle each request. Mission Control is the everyday web interface, as simple as a mainstream chat app, with operator tools on a separate admin page.</p>
+    <p>A self-hosted AI assistant runs open-source models on dedicated home-lab hardware while selectively using cloud providers only when explicitly allowed. It intelligently routes tasks to the best-suited model via a web interface, organizing chats and projects under an agent layer that requires owner confirmation for any action. Recent updates enable photo attachments, improved document processing, and streamlined streaming of responses.</p>
     <h3>Key features</h3>
-    <ul class="features"><li>Local-first routing: ordinary questions stay on a local model; cloud use needs explicit approval, spending caps and sensitivity checks</li><li>Mission Control web UI with Chat, Apps, Devices, Services and Import pages, installable on a phone as a web app</li><li>Voice conversation using local speech recognition and text-to-speech</li><li>Approval-gated actions: the assistant proposes changes and the owner confirms each one</li><li>Manages a small fleet of home-lab machines and containers, with read-only access by default</li><li>Self-hosted push notifications planned for a native Android app</li></ul>
+    <ul class="features"><li>Local-first routing with optional cloud fallback</li><li>Web UI for chat, apps, devices and services</li><li>Voice input using local speech recognition</li><li>Approval-gated actions requiring owner consent</li><li>Supports image and document file uploads</li><li>Runs on dedicated GPU nodes in a home lab</li></ul>
     <h3>Tech</h3>
-    <ul class="tags"><li>Python</li><li>JavaScript</li><li>PowerShell</li><li>Ollama</li><li>Open WebUI</li><li>Whisper</li><li>Kokoro TTS</li><li>Proxmox</li><li>Linux</li><li>Windows</li></ul>
+    <ul class="tags"><li>Python</li><li>JavaScript</li><li>Linux</li><li>Ollama</li><li>Open WebUI</li><li>Whisper</li><li>Proxmox</li><li>RTX GPUs</li></ul>
     <p class="top"><a href="#top">Back to all projects</a></p>
   </article>
   <article class="project" id="phone-control">
