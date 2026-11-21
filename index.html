@@ -25,7 +25,7 @@
       </div>
       <dl class="row-body">
         <div><dt>Goal</dt><dd>A private assistant for everyday questions, projects and home-lab tasks on local and cloud models, picked by request type, with cloud use only when allowed.</dd></div>
-        <div><dt>Where it stands</dt><dd>Mission Control, model routing and voice are in daily use. The services are being moved off the main desktop onto dedicated home-lab machines.</dd></div>
+        <div><dt>Where it stands</dt><dd>Mission Control, model routing and voice are in daily use. Local models and speech now run on a dedicated GPU node instead of the main desktop; recent work added photo and document attachments, a per-chat model picker and streamed replies.</dd></div>
       </dl>
     </li>
     <li class="row">
@@ -113,13 +113,13 @@
     </header>
     <dl class="goal-now">
       <div><dt>Goal</dt><dd>A private assistant for everyday questions, projects and home-lab tasks on local and cloud models, picked by request type, with cloud use only when allowed.</dd></div>
-      <div><dt>Where it stands</dt><dd>Mission Control, model routing and voice are in daily use. The services are being moved off the main desktop onto dedicated home-lab machines.</dd></div>
+      <div><dt>Where it stands</dt><dd>Mission Control, model routing and voice are in daily use. Local models and speech now run on a dedicated GPU node instead of the main desktop; recent work added photo and document attachments, a per-chat model picker and streamed replies.</dd></div>
     </dl>
-    <p>A self-hosted AI assistant that runs open-weight language models on a home GPU and only reaches out to cloud models when a request is eligible and the owner allows it. Because some models are better at certain tasks than others, a drag-and-drop screen assigns each kind of task to a chosen provider and model. An agent layer keeps projects, chats and tasks organized, and a router decides which model may handle each request. Mission Control is the everyday web interface, as simple as a mainstream chat app, with operator tools on a separate admin page.</p>
+    <p>A self-hosted AI assistant that runs open-weight language models on dedicated home-lab GPU hardware and only reaches out to cloud models when a request is eligible and the owner allows it. Each chat can use automatic routing or a chosen model, including a strictly local, private mode that never touches the cloud. An agent layer keeps projects, chats and tasks organized, and a router decides which model may handle each request. Mission Control is the everyday web interface, as simple as a mainstream chat app, with operator tools on a separate admin page.</p>
     <h3>Key features</h3>
-    <ul class="features"><li>Local-first routing: ordinary questions stay on a local model; cloud use needs explicit approval, spending caps and sensitivity checks</li><li>Mission Control web UI with Chat, Apps, Devices, Services and Import pages, installable on a phone as a web app</li><li>Voice conversation using local speech recognition and text-to-speech</li><li>Approval-gated actions: the assistant proposes changes and the owner confirms each one</li><li>Manages a small fleet of home-lab machines and containers, with read-only access by default</li><li>Self-hosted push notifications planned for a native Android app</li></ul>
+    <ul class="features"><li>Local-first routing: cloud use needs explicit approval, spending caps and sensitivity checks; a Local only mode never leaves the house</li><li>Mission Control web UI with Chat, Apps, Devices, Services and Import pages, installable on a phone as a web app</li><li>Per-chat model choice, replies that stream in as they are written, and photo and document attachments</li><li>Voice conversation using local speech recognition and text-to-speech</li><li>Approval-gated actions: the assistant proposes changes and the owner confirms each one</li><li>Manages a small fleet of home-lab machines and containers, with read-only access by default</li></ul>
     <h3>Tech</h3>
-    <ul class="tags"><li>Python</li><li>JavaScript</li><li>PowerShell</li><li>Ollama</li><li>Open WebUI</li><li>Whisper</li><li>Kokoro TTS</li><li>Proxmox</li><li>Linux</li><li>Windows</li></ul>
+    <ul class="tags"><li>Python</li><li>JavaScript</li><li>PowerShell</li><li>Ollama</li><li>Whisper</li><li>Kokoro TTS</li><li>Proxmox</li><li>Linux</li></ul>
     <p class="top"><a href="#top">Back to all projects</a></p>
   </article>
   <article class="project" id="phone-control">

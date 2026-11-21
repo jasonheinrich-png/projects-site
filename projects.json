@@ -3,31 +3,29 @@
     "slug": "local-ai",
     "name": "Local AI and Mission Control",
     "repo": "local-qwen-agent",
-    "tagline": "A private, local-first AI assistant with a model router, a web control panel and voice.",
     "goal": "A private assistant for everyday questions, projects and home-lab tasks on local and cloud models, picked by request type, with cloud use only when allowed.",
-    "overview": "A self-hosted AI assistant that runs open-weight language models on a home GPU and only reaches out to cloud models when a request is eligible and the owner allows it. Because some models are better at certain tasks than others, a drag-and-drop screen assigns each kind of task to a chosen provider and model. An agent layer keeps projects, chats and tasks organized, and a router decides which model may handle each request. Mission Control is the everyday web interface, as simple as a mainstream chat app, with operator tools on a separate admin page.",
+    "tagline": "A private, local-first AI assistant with a model router, a web control panel and voice.",
+    "overview": "A self-hosted AI assistant that runs open-weight language models on dedicated home-lab GPU hardware and only reaches out to cloud models when a request is eligible and the owner allows it. Each chat can use automatic routing or a chosen model, including a strictly local, private mode that never touches the cloud. An agent layer keeps projects, chats and tasks organized, and a router decides which model may handle each request. Mission Control is the everyday web interface, as simple as a mainstream chat app, with operator tools on a separate admin page.",
     "features": [
-      "Local-first routing: ordinary questions stay on a local model; cloud use needs explicit approval, spending caps and sensitivity checks",
+      "Local-first routing: cloud use needs explicit approval, spending caps and sensitivity checks; a Local only mode never leaves the house",
       "Mission Control web UI with Chat, Apps, Devices, Services and Import pages, installable on a phone as a web app",
+      "Per-chat model choice, replies that stream in as they are written, and photo and document attachments",
       "Voice conversation using local speech recognition and text-to-speech",
       "Approval-gated actions: the assistant proposes changes and the owner confirms each one",
-      "Manages a small fleet of home-lab machines and containers, with read-only access by default",
-      "Self-hosted push notifications planned for a native Android app"
+      "Manages a small fleet of home-lab machines and containers, with read-only access by default"
     ],
     "tech": [
       "Python",
       "JavaScript",
       "PowerShell",
       "Ollama",
-      "Open WebUI",
       "Whisper",
       "Kokoro TTS",
       "Proxmox",
-      "Linux",
-      "Windows"
+      "Linux"
     ],
     "status": "Active",
-    "current": "Mission Control, model routing and voice are in daily use. The services are being moved off the main desktop onto dedicated home-lab machines.",
+    "current": "Mission Control, model routing and voice are in daily use. Local models and speech now run on a dedicated GPU node instead of the main desktop; recent work added photo and document attachments, a per-chat model picker and streamed replies.",
     "updated": "2026-11"
   },
   {
